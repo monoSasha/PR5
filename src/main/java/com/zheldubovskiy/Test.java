@@ -3,7 +3,7 @@ package com.zheldubovskiy;
 public class Test {
 
     public static void main( String[] args ) {
-
+int a;
 //        Scanner in = new Scanner(System.in);
 //        System.out.print("Часов в день: ");
 //        short dayYear = in.nextShort();
@@ -21,13 +21,19 @@ public class Test {
 //        }
 
         Hobby hobby = new Drag("gonka", 35.5f, 5);
-        Hobby hobby1 = new Fish("fish", 20.5f, 7);
+        Hobby hobby1 = new Hobby("fish", 20.5f) {
+
+            @Override
+            public void tellAboutHobby() {
+                
+            }
+        };
 
 
 //        System.out.println(hobby);
         Hobby [] hobbys = {hobby, hobby1};
         for (Hobby temp: hobbys){
-            temp.tellAboutHobby();
+            System.out.println(temp);
         }
 
    }
